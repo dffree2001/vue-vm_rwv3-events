@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: "/about",
-    name: "about",
+    name: "AboutView",
     component: About,
   },
 ];
