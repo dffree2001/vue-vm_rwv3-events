@@ -43,7 +43,7 @@ export default {
   created() {
     watchEffect(() => {
       this.events = null
-      EventService.getEvents(2, this.page)
+      EventService.getEvents(3, this.page)
         .then(response => {
           this.events = response.data
           this.totalEvents = response.headers['x-total-count']
@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      var totalPages = Math.ceil(this.totalEvents / 2)
+      var totalPages = Math.ceil(this.totalEvents / 3)
 
       return this.page < totalPages
     }
